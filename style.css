@@ -1,0 +1,154 @@
+*, :root{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+}
+body{
+  background-color: #232f3e;
+  color: #ffffff;
+}
+
+main{
+  padding: 20px;
+  max-width: 640px;
+  margin: 0 auto 64px;
+
+}
+
+header{
+ margin-top: 64px;
+ padding-bottom: 24px;
+ border-bottom: 2px solid #ff9900;
+ display: flex; 
+ align-items: end; 
+}
+
+header h1{
+  font-size: 30px;
+  
+}
+
+#quiz{
+  counter-reset: quiz-item;
+
+}
+
+header img{
+  float: left; /* Adiciona o float para a direita */
+  margin-left: auto; 
+  width: 120px; /* Defina a largura desejada */
+  height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+}
+
+.quiz-item{
+  margin-top: 24px;
+  border: 2px solid #ff9900;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.quiz-item h3{
+ padding: 16px 20px;
+ /* color: #161616; */
+ display: flex;
+ gap: 10px;
+
+ background-color: #146fb448;
+} 
+
+.quiz-item h3::before{
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+
+  background-color: #dedfdd1f;
+  width: 28px;
+  height: 28px;
+  font-size: 15px;
+  border-radius:10% ;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quiz-item dl{
+padding: 20px 24px;
+
+display: grid;
+gap: 20px;
+}
+
+.quiz-item dl dt{
+  font-size:  14px;
+  line-height: 24px;
+  letter-spacing: 2px;
+
+  color: #ffff;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input{
+  all: unset;
+  border: 1px solid #ff9900;
+  width: 16px;
+  height: 16px;
+
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  
+}
+
+/*pseudo-selector*/
+input:checked{
+  /* border: 1px solid #f0db; */
+}
+
+input:checked:before{
+  content: "";
+  width: 10px;
+  height: 10px;
+
+  /* display: block; */
+  background-color: #ffff;
+  border-radius: 20%;
+}
+
+#acertos{
+  text-align: center;
+  background-color: #ff9900 /*#0058bf   #2f4fb8*/;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+}
+
+strong {
+  color:#161616;
+}
+.resultado{
+  color:#161616;
+  font-weight: bolder;
+  
+}
+
+
+
+
